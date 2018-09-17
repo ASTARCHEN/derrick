@@ -7,7 +7,7 @@ from derrick.core.common import *
 from derrick.core.extension import ExtensionPoints
 from derrick.core.module_loader import RiggingModuleLoader
 
-
+@singleton
 class RiggingManager(ExtensionPoints):
     """
     RiggingManager will load,manage,execute rigging.

@@ -9,7 +9,7 @@ from derrick.core.extension import ExtensionPoints
 from derrick.core.logger import Logger
 from derrick.core.module_loader import CommandModuleLoader
 
-
+@singleton
 class CommandManager(ExtensionPoints):
     """
     CommandManager extends ExtensionPoints

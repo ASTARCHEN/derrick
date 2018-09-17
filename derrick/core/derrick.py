@@ -15,7 +15,6 @@ from docopt import docopt
 from derrick.core.command import CommandContext
 from derrick.core.command_manager import CommandManager
 from derrick.core.common import *
-from derrick.core.engine_manager import EngineManager
 from derrick.core.logger import Logger
 from derrick.core.rigging_manager import RiggingManager
 from derrick.core.recorder import DerrickRecorder
@@ -35,7 +34,6 @@ class Derrick(object):
         self.cm = CommandManager()
         self.cm.set_commands_doc_template(__doc__)
         self.rm = RiggingManager()
-        self.em = EngineManager()
         self.recorder = DerrickRecorder()
 
     # First time to run Derrick
@@ -88,9 +86,6 @@ class Derrick(object):
 
     def get_rigging_manager(self):
         return self.rm
-
-    def get_engine_manager(self):
-        return self.em
 
     def get_recorder(self):
         return self.recorder
